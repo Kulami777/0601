@@ -1,0 +1,117 @@
+html, body {
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    background: #222;
+    color: #fff;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+
+#game-container {
+    width: 100vw;
+    height: 100vh;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+}
+
+#health-bar-container {
+    width: 200px;
+    height: 20px;
+    background: #444;
+    border-radius: 10px;
+    overflow: hidden;
+    margin-left: 10px;
+    display: inline-block;
+}
+
+#health-bar {
+    height: 100%;
+    width: 100%;
+    background: green;
+    transition: width 0.3s, background-color 0.3s;
+}
+
+#game-content {
+    position: relative;
+    width: 100vw;
+    height: calc(100vh - 60px);
+    min-height: 0;
+    margin-top: 0;
+}
+
+canvas {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    background: #28a745;
+    color: #fff;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#victory-message, #loading, #effect-indicator {
+    display: none;
+}
+
+#game-rules {
+    background: #333;
+    border-radius: 10px;
+    padding: 20px;
+    margin: auto;
+    max-width: 500px;
+    text-align: center;
+}
+
+#gesture-guide {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 10px;
+}
+
+.gesture-item {
+    text-align: center;
+}
+
+.gesture-preview {
+    font-size: 30px;
+}
+
+/* 右下角簽名 */
+#signature {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    font-size: 12px;
+    color: #aaa;
+    opacity: 0.7;
+    font-family: sans-serif;
+    pointer-events: none; /* 不影響點擊 */
+}
+
+#signature:hover {
+    opacity: 1;
+    color: #fff;
+}
