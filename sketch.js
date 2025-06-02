@@ -276,15 +276,12 @@ function showVictory() {
     if (victoryMsg && finalScoreElem) {
         victoryMsg.style('display', 'block');
         finalScoreElem.html(score);
-
-        // 3秒後自動重啟遊戲
-        setTimeout(() => {
-            victoryMsg.style('display', 'none');
-            restartGame();
-        }, 3000);
+        // 不要自動重啟，讓玩家自己按按鈕
     }
 }
 
 function windowResized() {
     resizeCanvas(windowWidth, windowHeight);
 }
+
+// noLoop();  // 不要呼叫這行
