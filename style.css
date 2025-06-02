@@ -76,6 +76,14 @@ button:hover {
     display: none;
 }
 
+#victory-message {
+    z-index: 20;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
 #game-rules {
     background: #333;
     border-radius: 10px;
